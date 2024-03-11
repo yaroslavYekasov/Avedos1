@@ -27,7 +27,7 @@
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("valmis") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("valmis") %>'>
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>0</asp:ListItem>
                         </asp:DropDownList>
@@ -41,7 +41,7 @@
                         <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("kasutajaId") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource_kasutaja" DataTextField="login" DataValueField="login">
+                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource_kasutaja" DataTextField="login" DataValueField="login" SelectedValue='<%# Bind("kasutajaId") %>'>
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource_kasutaja" runat="server" ConnectionString="<%$ ConnectionStrings:avedosConnectionString1 %>" SelectCommand="SELECT [login] FROM [kasutaja]"></asp:SqlDataSource>
                     </InsertItemTemplate>
